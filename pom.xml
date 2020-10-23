@@ -63,7 +63,7 @@
             <plugin>
                 <groupId>org.lorislab.maven</groupId>
                 <artifactId>mp-rest-client-maven-plugin</artifactId>
-                <version>0.5.0</version>
+                <version>0.6.0</version>
                 <executions>
                     <execution>
                         <id>petstore-v3.0</id>
