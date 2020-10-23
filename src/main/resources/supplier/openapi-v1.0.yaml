@@ -1,0 +1,39 @@
+openapi: "3.0.0"
+info:
+  version: 1.0.0
+  title: supplier
+  license:
+    name: MIT
+servers:
+  - url: http://supplier.swagger.io/v1
+paths:
+  /supplier/{id}:
+    get:
+      summary: Info for a specific supplier
+      operationId: showSupplier
+      tags:
+        - suppliers
+      parameters:
+        - name: id
+          in: path
+          required: true
+          description: The id of the supplier to retrieve
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Expected response to a valid request
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Supplier"
+components:
+  schemas:
+    Supplier:
+      type: object
+      properties:
+        uuid:
+          type: string
+      required:
+        - uuid
+      description: A supplier representation
