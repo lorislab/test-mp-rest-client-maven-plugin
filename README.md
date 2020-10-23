@@ -1,0 +1,1 @@
+# test-mp-res-client-maven-plugin
